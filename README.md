@@ -3,12 +3,14 @@ for Chrome, Microsoft Edge & other Chromium-based browsers
 </br></br>
 <div align="center">
   <img src="https://github.com/vruoss/SaveItAll/blob/main/SaveItAll.png" alt="SaveItAll Logo" width="725" height="437">
-  <h3>AI-Powered Web Content Extraction & Organization</h3>
-</div>
-</br>
-</br>
-**1,5min Tutorial**
+  <h3>AI-Powered Web Content Extraction & Organization
+1,5min Tutorial
 <a href="https://vimeo.com/1066980490?share=copy" target="_blank">https://vimeo.com/1066980490?share=copy</a>
+</h3>
+</div>
+
+
+
 
 
 
