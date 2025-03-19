@@ -2,13 +2,14 @@
 for Chrome, Microsoft Edge & other Chromium-based browsers
 
 <div align="center">
-  <img src="public/icons/icon128.png" alt="SaveItAll Logo" width="128" height="128">
+  <img src="[https://github.com/vruoss/SaveItAll/blob/main/SaveItAll/icons/icon128.png](https://github.com/vruoss/SaveItAll/blob/main/SaveItAll.png)" alt="SaveItAll Logo" width="1165" height="737">
   <h3>AI-Powered Web Content Extraction & Organization</h3>
 </div>
 
 
 **1,5min Tutorial**
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1066980490?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="SaveItAll Chrome Extension Tutorial"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<a href="https://vimeo.com/1066980490?share=copy" target="_blank">https://vimeo.com/1066980490?share=copy</a>
+
 
 
 ## 🌟 Features
