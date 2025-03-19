@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorry to See You Go - SaveItAll Feedback</title>
+  <link rel="icon" type="image/png" href="/icons/icon128.png">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-300: #d1d5db;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-800: #1f2937;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.5;
+      background-color: var(--gray-50);
+      color: var(--gray-800);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    .logo {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: var(--gray-800);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: var(--gray-600);
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    label {
+      font-weight: 500;
+      color: var(--gray-700);
+    }
+
+    textarea, select {
+      padding: 0.75rem;
+      border: 1px solid var(--gray-300);
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      color: var(--gray-800);
+      background-color: white;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    textarea:focus, select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      background-color: var(--primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: var(--primary-dark);
+    }
+
+    .success-message {
+      display: none;
+      text-align: center;
+      color: #059669;
+      font-weight: 500;
+      margin-top: 1rem;
+    }
+
+    .success .feedback-form {
+      display: none;
+    }
+
+    .success .success-message {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="/icons/icon128.png" alt="SaveItAll Logo" class="logo">
+    <h1>Sorry to See You Go!</h1>
+    <p>We'd love to hear your feedback to make SaveItAll better for everyone. Your input helps us improve!</p>
+    
+    <div id="feedbackForm" class="feedback-form">
+      <div class="form-group">
+        <label for="reason">What's the main reason you're uninstalling?</label>
+        <select id="reason" name="reason" required>
+          <option value="">Please select a reason...</option>
+          <option value="not-useful">Not useful for my needs</option>
+          <option value="bugs">Found bugs or issues</option>
+          <option value="difficult">Too difficult to use</option>
+          <option value="missing-features">Missing important features</option>
+          <option value="performance">Performance issues</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="feedback">How could we improve?</label>
+        <textarea id="feedback" name="feedback" placeholder="Please share your thoughts..." required></textarea>
+      </div>
+
+      <button type="submit">Send Feedback</button>
+    </div>
+
+    <div class="success-message">
+      <h2>Thank you for your feedback!</h2>
+      <p>We appreciate you taking the time to help us improve SaveItAll.</p>
+    </div>
+  </div>
+
+  <script>
+    // Store feedback in local storage instead of sending to external service
+    document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const reason = document.getElementById('reason').value;
+      const feedback = document.getElementById('feedback').value;
+      
+      // Store feedback locally
+      chrome.storage.local.get(['feedback'], (result) => {
+        const feedbackList = result.feedback || [];
+        feedbackList.push({
+          reason,
+          feedback,
+          timestamp: new Date().toISOString()
+        });
+        chrome.storage.local.set({ feedback: feedbackList });
+      });
+
+      // Show success message
+      document.querySelector('.container').classList.add('success');
+    });
+  </script>
+</body>
+</html>
