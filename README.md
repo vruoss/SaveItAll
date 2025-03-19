@@ -2,7 +2,7 @@
 for Chrome, Microsoft Edge & other Chromium-based browsers
 </br>
 <div align="center">
-  <img src="https://github.com/vruoss/SaveItAll/blob/main/SaveItAll.png" alt="SaveItAll Logo" width="1165" height="537">
+  <img src="https://github.com/vruoss/SaveItAll/blob/main/SaveItAll.png" alt="SaveItAll Logo" width="865" height="437">
   <h3>AI-Powered Web Content Extraction & Organization</h3>
 </div>
 </br>
