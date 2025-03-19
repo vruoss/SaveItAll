@@ -4,8 +4,8 @@ for Chrome, Microsoft Edge & other Chromium-based browsers
 <div align="center">
   <img src="https://github.com/vruoss/SaveItAll/blob/main/SaveItAll.png" alt="SaveItAll Logo" width="725" height="437">
   <h3>AI-Powered Web Content Extraction & Organization</h3>
-1,5min Tutorial</br>
-<a href="https://vimeo.com/1066980490?share=copy" target="_blank">https://vimeo.com/1066980490?share=copy</a>
+</br>
+<a href="https://vimeo.com/1066980490?share=copy" target="_blank">1,5min Tutorial</a>
 
 </div>
 </br>
@@ -27,7 +27,7 @@ for Chrome, Microsoft Edge & other Chromium-based browsers
 
 ## 🚀 Getting Started
 
-1. Install the extension from the Chrome Web Store
+1. Install the extension from the Chrome Web Store or download this Repo and install it in the developer mode: <a href="https://youtu.be/drNTeGl41ns?si=uPcVmDQTTEDZ-51e&t=15" target="_blank">Tutorial</a>
 2. Click the extension icon to open the dashboard
 3. Get your OpenAI API key from [platform.openai.com/api-keys](https://platform.openai.com/api-keys)
 4. Enter your API key in the extension settings
